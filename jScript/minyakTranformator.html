@@ -1,0 +1,61 @@
+<!-- kumparan -->
+<div class="form-group">
+    <div class="col-xs-2">Minyak Transformator</div>
+    <div class="col-xs-1">
+        <select class="form-control" ng-model="kumparanF" ng-change="changeKumparan()">
+            <option value="1">1 (Sangat Rendah)</option>
+            <option value="2">2 (Rendah)</option>
+            <option value="3">3 (Sedang)</option>
+            <option value="4">4 (Tinggi)</option>
+            <option value="5">5 (Sangat Tinggi)</option>
+        </select>
+    </div>
+    <div class="col-xs-1">
+        <select class="form-control" ng-model="kumparanL" ng-change="changeKumparan()">
+            <option value="1">1 (Sangat Rendah)</option>
+            <option value="2">2 (Rendah)</option>
+            <option value="3">3 (Sedang)</option>
+            <option value="4">4 (Tinggi)</option>
+            <option value="5">5 (Sangat Tinggi)</option>
+        </select>
+    </div>
+    <div class="col-xs-1">
+        <select class="form-control" ng-model="kumparanC" ng-change="changeKumparan()">
+            <option value="1">1 (Sangat Rendah)</option>
+            <option value="2">2 (Rendah)</option>
+            <option value="3">3 (Sedang)</option>
+            <option value="4">4 (Tinggi)</option>
+            <option value="5">5 (Sangat Tinggi)</option>
+        </select>
+    </div>
+    <div class="col-xs-1">
+        <select class="form-control" ng-model="kumparanP" ng-change="changeKumparan()">
+            <option value="1">1 (Sangat Rendah)</option>
+            <option value="2">2 (Rendah)</option>
+            <option value="3">3 (Sedang)</option>
+            <option value="4">4 (Tinggi)</option>
+            <option value="5">5 (Sangat Tinggi)</option>
+        </select>
+    </div>
+    <div class="col-xs-1">
+        <select class="form-control" ng-model="kumparanS" ng-change="changeKumparan()">
+            <option value="1">1 (Sangat Rendah)</option>
+            <option value="2">2 (Rendah)</option>
+            <option value="3">3 (Sedang)</option>
+            <option value="4">4 (Tinggi)</option>
+            <option value="5">5 (Sangat Tinggi)</option>
+        </select>
+    </div>
+    <div class="col-xs-1">
+        <select class="form-control" ng-model="kumparanE" ng-change="changeKumparan()">
+            <option value="1">1 (Sangat Rendah)</option>
+            <option value="2">2 (Rendah)</option>
+            <option value="3">3 (Sedang)</option>
+            <option value="4">4 (Tinggi)</option>
+            <option value="5">5 (Sangat Tinggi)</option>
+        </select>
+    </div>
+    <div class="col-xs-4">
+        <input type="text" readonly class="form-control" value="{{kumparanF * kumparanL * kumparanC * kumparanP * kumparanS * kumparanE}}" />
+    </div>
+</div>

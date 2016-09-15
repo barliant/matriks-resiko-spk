@@ -1,0 +1,29 @@
+<!-- mulai -->
+<div class="panel panel-default myMargin" ng-hide="hideMulai">
+    <div class="panel-body">
+        <button type="submit" class="btn btn-default question" ng-click="btnMulai()">Mulai</button>
+    </div>
+</div>
+<!-- question  -->
+<div class="panel panel-default myMargin" ng-hide="hideQuestion">
+    <div class="panel-body">
+        <div class="question">{{question.question}}</div>
+        <div class="question" ng-hide="hideAnswer">
+            <input type="radio" name="q" ng-model="question.ans" value="0"> {{question.ans0}}
+        </div>
+        <div class="question" ng-hide="hideAnswer">
+            <input type="radio" name="q" ng-model="question.ans" value="1"> {{question.ans1}}
+        </div>
+        <button type="submit" class="btn btn-default question" ng-click="backQuestion();">Back</button>
+        <button type="submit" class="btn btn-default question" ng-click="nextQuestion(question.ans)">Next</button>
+    </div>
+</div>
+<!-- view  -->
+<div class="panel panel-default myMargin" ng-hide="hideFinish">
+    <div class="panel-body">
+        Selesai
+    </div>
+    <button type="submit" class="btn btn-default question" ng-click="backQuestion();">Back</button>
+</div>
+
+<!--test alert finish action-->

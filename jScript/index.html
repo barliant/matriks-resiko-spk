@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="spkpisttl">
+
+<head>
+    <title>SPKPISTTL</title>
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="angular.min.js"></script>
+    <script type="text/javascript">
+    angular.module("spkpisttl", ["ngRoute"])
+        .config(function($routeProvider) {
+            $routeProvider.when("/femch", {
+                templateUrl: "femch.html"
+            });
+            $routeProvider.when("/sistemPemeliharaan", {
+                templateUrl: "sistemPemeliharaan.html"
+            });
+            $routeProvider.when("/sistemPemeliharaanDGA", {
+                templateUrl: "sistemPemeliharaanDGA.html"
+            });
+            $routeProvider.when("/matrixResiko", {
+                templateUrl: "matrixResiko.html"
+            });
+            $routeProvider.otherwise({
+                templateUrl: "femch.html"
+            });
+        });
+    </script>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="jquery-ui.css" rel="stylesheet" />
+    <script src="app.js"></script>
+    <script src="teganganTembusController.js"></script>
+    <script src="dgaController.js"></script>
+    <script src="angular-route.min.js"></script>
+    <script src="matrixResikoCtrl.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <style type="text/css">
+    .form-control {
+        margin-bottom: 4px;
+    }
+    .question {
+        margin: 20px; 
+    }
+    .myMargin {
+        margin:10px;
+    }
+    </style>
+</head>
+
+<body ng-controller="MainCtrl">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">SPKPISTTL</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#femch">FEMCH</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                          Sistem Pemeliharaan <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#sistemPemeliharaan">Tegangan Tembus</a></li>
+                          <li><a href="#sistemPemeliharaanDGA">DGA</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#matrixResiko">Analisis Matriks Resiko</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <ng-view />
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!-- kumparan -->
+
+<div class="form-group">
+    <div class="col-xs-2">Kumparan</div>
+    <div class="col-xs-1">
+        <select class="form-control" ng-model="kumparanF" ng-change="changeKumparan()">
+            <option value="1">1 (Sangat Rendah)</option>
+            <option value="2">2 (Rendah)</option>
+            <option value="3">3 (Sedang)</option>
+            <option value="4">4 (Tinggi)</option>
+            <option value="5">5 (Sangat Tinggi)</option>
+        </select>
+    </div>
+    <div class="col-xs-1">
+        <select class="form-control" ng-model="kumparanL" ng-change="changeKumparan()">
+            <option value="1">1 (Sangat Rendah)</option>
+            <option value="2">2 (Rendah)</option>
+            <option value="3">3 (Medium)</option>
+            <option value="4">4 (Tinggi)</option>
+        </select>
+    </div>
+    <div class="col-xs-1">
+        <select class="form-control" ng-model="kumparanC" ng-change="changeKumparan()">
+            <option value="1">1 (kurang dari 1.000.000)</option>
+            <option value="2">2 (1.000.000 s/d 3.000.000)</option>
+            <option value="3">3 (3.000.000 s/d 5.000.000)</option>
+            <option value="4">4 (lebih dari 5.000.000)</option>
+        </select>
+    </div>
+    <div class="col-xs-1">
+        <select class="form-control" ng-model="kumparanP" ng-change="changeKumparan()">
+            <option value="1">1 (kurang dari 10.000.000)</option>
+            <option value="2">2 (10.000.000 s/d 15.000.000)</option>
+            <option value="3">3 (15.000.000 s/d 25.000.000)</option>
+            <option value="4">4 (lebih dari 25.000.000)</option>
+        </select>
+    </div>
+    <div class="col-xs-1">
+        <select class="form-control" ng-model="kumparanS" ng-change="changeKumparan()">
+            <option value="1">1 (Tidak berpengaruh terhadap keamanan)</option>
+            <option value="2">2 (Bahaya terhadap orang didekatnya)</option>
+            <option value="3">3 (Bahaya terhadap orang di areal GI)</option>
+            <option value="4">4 (Bahaya terhadap penduduk)</option>
+        </select>
+    </div>
+    <div class="col-xs-1">
+        <select class="form-control" ng-model="kumparanE" ng-change="changeKumparan()">
+            <option value="1">1 (Tidak ada dampak terhadap lingkungan)</option>
+            <option value="2">2 (Kerusakan kecil)</option>
+            <option value="3">3 (Kerusakan sedang)</option>
+            <option value="4">4 (Kerusakan luas)</option>
+        </select>
+    </div>
+    <div class="col-xs-4">
+        <input type="text" readonly class="form-control" value="{{kumparanF * kumparanL * kumparanC * kumparanP * kumparanS * kumparanE}}" />
+    </div>
+</div>

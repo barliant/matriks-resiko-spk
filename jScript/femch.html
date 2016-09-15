@@ -1,0 +1,109 @@
+<div class="panel panel-default row">
+    <div class="panel">
+        <div class="panel-body">
+            <form role="form">
+                <div class="form-group form-group-sm">
+                    <label class="col-xs-2">Tanggal Jadi</label>
+                    <div class="col-xs-10">
+                        <input id="tglJadi" type="text" class="form-control" ng-model="tglJadi">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2">Nama Alat</label>
+                    <div class="col-xs-10">
+                        <input id="namaAlat" type="text" class="form-control" ng-model="namaAlat">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2">APP</label>
+                    <div class="col-xs-10">
+                        <select class="form-control" ng-model="selectedAPP" ng-options="item.name for item in APP track by item.id">
+                            <option style="display:none" value="">--Pilih APP--</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2">GI</label>
+                    <div class="col-xs-10">
+                        <select class="form-control" ng-model="selectedGI" ng-options="item.name for item in GI track by item.id">
+                            <option style="display:none" value="">--Pilih GI--</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2">Bay</label>
+                    <div class="col-xs-10">
+                        <select class="form-control" ng-model="selectedBay" ng-options="item.name for item in Bay track by item.id">
+                            <option style="display:none" value="">--Pilih Bay--</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2">Merk</label>
+                    <div class="col-xs-10">
+                        <select class="form-control" ng-model="selectedMerk" ng-options="item.name for item in Merk track by item.id">
+                            <option style="display:none" value="">--Pilih Merk--</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2">Type</label>
+                    <div class="col-xs-10">
+                        <select class="form-control" ng-model="selectedType" ng-options="item.name for item in Type track by item.id">
+                            <option style="display:none" value="">--Pilih Type--</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2">TEG (kV)</label>
+                    <div class="col-xs-10">
+                        <select class="form-control" ng-model="selectedTegKva" ng-options="item.name for item in TegKva track by item.id">
+                            <option style="display:none" value="">--Pilih TEG (kV)--</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2">Tahun Buat</label>
+                    <div class="col-xs-10">
+                        <select class="form-control" ng-model="selectedThnBuat" ng-options="item for item in ThnBuat">
+                            <option style="display:none" value="">--Pilih Tahun Buat--</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2">Tahun Operasi</label>
+                    <div class="col-xs-10">
+                        <select class="form-control" ng-model="selectedThnOperasi" ng-options="item for item in ThnOperasi">
+                            <option style="display:none" value="">--Pilih Tahun Operasi--</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- sub sistem -->
+                <div style="color:transparent; margin-top:30px">none</div>
+                <div class="form-group">
+                    <label class="col-xs-2">Sub Sistem</label>
+                    <label class="col-xs-1 text-center">Frekuensi</label>
+                    <label class="col-xs-1 text-center">Eskalasi</label>
+                    <label class="col-xs-1 text-center">Biaya Perbaikan</label>
+                    <label class="col-xs-1 text-center">Biaya Kerugian</label>
+                    <label class="col-xs-1 text-center">Dampak</label>
+                    <label class="col-xs-1 text-center">Kerusakan Lingkungan</label>
+                    <label class="col-xs-4 text-center">Score</label>
+                </div>
+                <div style="color:transparent;">none</div>
+                <ng-include src="'kumparan.html'"></ng-include>
+                <ng-include src="'bushing.html'"></ng-include>
+                <ng-include src="'oltc.html'"></ng-include>
+                <ng-include src="'konservator.html'"></ng-include>
+                <ng-include src="'pendingin.html'"></ng-include>
+                <ng-include src="'proteksi.html'"></ng-include>
+                <ng-include src="'fireProtection.html'"></ng-include>
+                <ng-include src="'minyakTransformator.html'"></ng-include>
+                <div style="color:transparent; margin-top:30px">none</div>
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-default" ng-click="simpanGangguan()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
